@@ -3,20 +3,8 @@ document.getElementById("vypocet").addEventListener("click", function(){
     document.getElementById("vypis").innerHTML = "";
     let objemkrychle = objem(a);
     let povrchkrychle = povrch(a);
-    if(objemkrychle == null && povrchkrychle == null){
-            document.getElementById("vypis").innerHTML = "<br>" + "Nezvolil jste si, jestli chcete počítat objem nebo povrch !";
-    }
-    else if(povrchkrychle == null){
-        vypisobjemu(objemkrychle);
-
-    }
-    else if(objemkrychle == null){
-        vypispovrchu(povrchkrychle);
-    }
-    else{
-        vypisobjemu(objemkrychle);
-        vypispovrchu(povrchkrychle);
-    }
+    vypisobjemu(objemkrychle);
+    vypispovrchu(povrchkrychle);
 })
 function strana(){
     let strana = document.getElementById("strkrychle").value;
@@ -24,62 +12,51 @@ function strana(){
 }
 function objem(a){
     let objemk;
-    let volba = 0;
-    if(volba == 0){
         objemk = a*a*a;
-        return objemk;
-    }
-    else {
-        objemk = null;
-        return objemk;
-    }     
+        return objemk;   
 }
 
 function povrch(a){
-    let povrchk;
-    let volba = 0;
-    if(volba == 1){
-        povrchk = 6*a;
-        return povrchk;
-    }
-    else {
-        povrchk = null;
-        return povrchk;
-    }  
+    let povrchk;  
+    povrchk = 6*a;
+    return povrchk;
+    
 }
 function vypisobjemu(objem){
     let jednotky = document.getElementById("jednotka").value;
     let jednotka;
+    console.log(jednotky);
     switch(jednotky){
-        case 2: jednotka = "mm";
+        case "mm": jednotka = "mm";
         break;
-        case 3: jednotka = "dm";
+        case "dm": jednotka = "dm";
         break;
-        case 4: jednotka = "m";
+        case "m": jednotka = "m";
         break;
-        case 5: jednotka = "km";
+        case "km": jednotka = "km";
         break;
         default: jednotka = "cm"
         break;
     }
-    document.getElementById("vypis").innerHTML += "<br>" + "<p>Objem krychle je " + objem + " " + jednotka + "</p>";
+    console.log(jednotka);
+    document.getElementById("vypis").innerHTML += "<br>" + "<p>Objem krychle je " + objem + " " + jednotka + ".</p>";
    
 }
 function vypispovrchu(povrch){
     let jednotky = document.getElementById("jednotka").value;
     let jednotka;
     switch(jednotky){
-        case 3: jednotka = "mm";
+        case "mm": jednotka = "mm";
         break;
-        case 4: jednotka = "dm";
+        case "dm": jednotka = "dm";
         break;
-        case 5: jednotka = "m";
+        case "m": jednotka = "m";
         break;
-        case 6: jednotka = "km";
+        case "km": jednotka = "km";
         break;
         default: jednotka = "cm"
         break;
     }
-    document.getElementById("vypis").innerHTML += "<br>" + "<p>Povrch krychle je " + povrch + " " + jednotka + "</p>";
+    document.getElementById("vypis").innerHTML += "<br>" + "<p>Povrch krychle je " + povrch + " " + jednotka + ".</p>";
    
 }

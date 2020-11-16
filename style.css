@@ -58,14 +58,16 @@ h2{
       background-color: rgb(114, 108, 108);
       color: white;
       text-align: center;
+      padding: 50px;
         }
 #povrchpadd{
     padding-left: 50px;
 }
 #vypis{
     text-align: center;
-    color: red;
+    color: green;
 
 }
+
 
 
