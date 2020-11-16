@@ -14,23 +14,46 @@
     <header class="jumbotron">
         <div class="text-center">
             <h1 class="nadpis">Obsah a povrch krychle</h1>
-           <a href="../index.html">Home <br><img class="img-fluid homeimg" src="../img/home.png" alt=""></a>
+           <a href="../index.html">Zpět</a>
         </div>
     </header>
     <main>
         <div class="container formular">
             <div class="form-check form-check-inline">
                 <div>
-                <input id="objem" class="form-check-input" type="checkbox" name="objem" value="true">
+                <input id="objem" class="form-check-input" type="checkbox" name="objem" value="0">
                 <label for="objem" class="form-check-label">Objem</label></div>
                 <div id="povrchpadd">
-                <input id="povrch" class="form-check-input" type="checkbox" name="povrch" value="true">
+                <input id="povrch" class="form-check-input" type="checkbox" name="povrch" value="0">
                 <label for="povrch" class="form-check-label">Povrch</label></div>
             </div>
+            <div class="form-group row">
+                <div class="col-sm-3">
+                    <label for="strkrychle">Zadejte stranu krychle</label>
+                </div>
+                <div class="col-sm-6">
+                    <input id="strkrychle" class="form-control" type="number" name="stranakrychle">
+                </div>
+                <div class="col-sm-3">
+                    <select class="form-control" name="jednotka" id="jednotka">
+                        <option value="1">cm</option>
+                        <option value="3">mm</option>
+                        <option value="4">dm</option>
+                        <option value="5">m</option>
+                        <option value="6">km</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="vypocet" class="btn btn-primary">
+                Hotovo
+            </button>
         </div>
-        
+        <div id="vypis">
+
+        </div>
     </main>
     
 </body>
+<script src="/krychle/krychle.js"></script>
 
 </html>
