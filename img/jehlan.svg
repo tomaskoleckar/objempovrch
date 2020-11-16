@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="160" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <style type="text/css"><![CDATA[
+      polygon, polyline {stroke-linejoin:round}
+      line, polyline {stroke-linecap:round} 
+      text {font: italic 1.2em "Times New Roman",serif}
+    ]]></style>
+ <clipPath id="clip1">
+    <polygon points="10,165 80,152 80,20" />
+ </clipPath>
+<!-- alfa --> 
+<defs>
+<g>
+<symbol overflow="visible" id="glyph0-0">
+<path d='M9.60262 -5.24722C9.60262 -7.259 8.46192 -9.14634 6.26348 -9.14634C3.54654 -9.14634 0.8296 -6.18052 0.8296 -3.23544C0.8296 -1.43106 1.94956 0.2074 4.06504 0.2074C5.35092 0.2074 6.88568 -0.29036 8.35822 -1.53476C8.64858 -0.37332 9.29152 0.2074 10.1833 0.2074C11.3033 0.2074 11.8633 -0.95404 11.8633 -1.22366C11.8633 -1.41032 11.7181 -1.41032 11.6559 -1.41032C11.49 -1.41032 11.4692 -1.3481 11.407 -1.18218C11.2203 -0.66368 10.7433 -0.2074 10.2456 -0.2074C9.60262 -0.2074 9.60262 -1.53476 9.60262 -2.7999C11.7181 -5.33018 12.2159 -7.94342 12.2159 -7.96416C12.2159 -8.15082 12.0499 -8.15082 11.9877 -8.15082C11.8011 -8.15082 11.7803 -8.0886 11.6974 -7.71528C11.4277 -6.80272 10.8885 -5.185 9.60262 -3.48432V-5.24722ZM8.296 -2.03252C6.47088 -0.39406 4.83242 -0.2074 4.10652 -0.2074C2.63398 -0.2074 2.21918 -1.51402 2.21918 -2.4888C2.21918 -3.38062 2.67546 -5.4961 3.3184 -6.6368C4.16874 -8.0886 5.33018 -8.73154 6.26348 -8.73154C8.27526 -8.73154 8.27526 -6.09756 8.27526 -4.3554C8.27526 -3.8369 8.25452 -3.29766 8.25452 -2.77916C8.25452 -2.36436 8.27526 -2.26066 8.296 -2.03252Z' id='g0-11'/>
+</symbol>
+</g>
+</defs>
+<!-- uhlopricka, vyska -->
+ <line x1="10" y1="165" x2="80" y2="152" stroke="#1f3a93" />
+ <line x1="80" y1="20" x2="80" y2="152" stroke="#cf000f" />
+<!-- uhly -->
+ <circle cx="80" cy="152" r="20" fill="none" stroke="#1f3a93" clip-path="url(#clip1)" />
+ <circle cx="72" cy="145" r="1" fill="#1f3a93" />
+ <circle cx="10" cy="160" r="30" fill="none" stroke="#cf000f" clip-path="url(#clip1)" />
+<!-- jehlan -->
+ <polygon points="10,165 80,20 150,140 110,180" stroke="#000000" stroke-width="2" fill="none" />
+ <line x1="80" y1="20" x2="110" y2="180" stroke="#000000" stroke-width="2" />
+ <polyline points="10,165 60,125 150,140" stroke="#000000" fill="none" stroke-dasharray="5,3" />
+ <line x1="80" y1="20" x2="60" y2="125"  stroke="#000000" stroke-dasharray="5,3" />
+<!-- popisky -->
+<g style="fill:rgb(81.175232%,0%,5.882263%);fill-opacity:1;" >
+  <use xlink:href="#glyph0-0" x="20" y="157" />
+</g>      
+ <text x="73" y="100" text-anchor="middle" fill="#cf000f">v</text>
+ <text x="37" y="95" text-anchor="middle">s</text>      
+ <text x="55" y="187" text-anchor="middle">a</text>
+ <text x="135" y="172" text-anchor="middle">a</text>
+</svg>

@@ -1,5 +1,6 @@
 .nadpis{
     color: blue;
+    text-align: center;
 }
 .vyber{
     width: 10%;
@@ -7,3 +8,59 @@
 .a{
     text-align: center;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+li {
+    float: left;
+  }
+  
+li a {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+#kvadrimg{
+      width: 60%;
+      padding-top: 30px;
+      
+  }
+#krychleimg{
+      width: 70%;
+      padding-left: 50px;
+  }
+#homeimg{
+      width: 70%;
+      padding-top: 30px;
+  }
+#jehlanimg{
+      width: 110%;
+      padding-top: 10px;
+      padding-left: 100px;
+  }
+#odstavec{
+      font-size: 40px;
+  }
+h2{
+      font-size: 50px;
+  }
+.homeimg{
+      width: 10%;
+  }
+.formular{
+      background-color: rgb(114, 108, 108);
+      color: white;
+      text-align: center;
+        }
+#povrchpadd{
+    padding-left: 50px;
+}
+
+
