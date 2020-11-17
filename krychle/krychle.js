@@ -18,7 +18,7 @@ function objem(a){
 
 function povrch(a){
     let povrchk;  
-    povrchk = 6*a;
+    povrchk = 6*a*a;
     return povrchk;
     
 }
