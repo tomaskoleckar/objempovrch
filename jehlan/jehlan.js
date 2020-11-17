@@ -4,13 +4,11 @@ document.getElementById("vypocet").addEventListener("click", function(){
     let pocetHran = pocetH();
     let vyskaJehlanu = vyskaJ();
     let vyskaSteny = vyskaS(vyskaJehlanu,stranaPodstavy);
-    let hranaSteny = hranaS();
+    let vyskaSteny2 = vyskaS2(vyskaJehlanu, vyskaPodstavy);
     let obsahPodstavy = Spodstavy(stranaPodstavy, vyskaPodstavy);
     let objemJehlanu = objemJ(obsahPodstavy, vyskaJehlanu);
-    let povrchJehlanu = povrchJ(obsahPodstavy, hranaSteny, vyskaSteny, pocetHran);
-
+    let povrchJehlanu = povrchJ(obsahPodstavy, stranaPodstavy, vyskaSteny, pocetHran, vyskaSteny2,vyskaPodstavy);
     document.getElementById("vypis").innerHTML = "";
-    console.log(obsahPodstavy);
     vypisobjemu(objemJehlanu);
     vypispovrchu(povrchJehlanu);
 })
@@ -28,42 +26,45 @@ function Spodstavy(strana, strana2){
     tvar = document.getElementById("tvar").value;
     if(tvar == "ctverec"){
         obsah = strana*strana;
-        return obsah;
     }
     else if(tvar == "obdelnik"){
         obsah = strana*strana2;
-        return obsah;
     }
     else{
-        obsah = strana*strana2/2;
-        return obsah;
+        obsah = strana*vyskaT(strana)/2;  
     }
-
+    return obsah;
 }
 function pocetH(){
     let tvar = document.getElementById("tvar").value;
     let pocet;
     if(tvar == "ctverec"){
         pocet = 4;
-        return pocet;
     }
     else if(tvar == "obdelnik"){
         pocet = 4;
-        return pocet;
     }
     else{
-        pocet = 3;
-        return pocet;
+        pocet = 3; 
     }
+    return pocet;
+}
+function vyskaT(strana){
+    let obvod = strana * 3 / 2;
+    let vyska = (2/strana * Math.sqrt(obvod * (obvod - strana) * (obvod - strana) * (obvod - strana))).toFixed(2);
+    console.log(vyska);
+    return vyska;
 }
 function vyskaJ(){
     let strana = document.getElementById("vyska").value;
     return strana;
 }
-function hranaS(){
-}
 function vyskaS(vyskaJehlanu,stranaPodstavy){
-    let strana = (Math.sqrt(vyskaJehlanu*vyskaJehlanu + (stranaPodstavy*stranaPodstavy)/2)).toFixed(2);
+    let strana = (Math.sqrt(vyskaJehlanu*vyskaJehlanu + stranaPodstavy/2*stranaPodstavy/2)).toFixed(2);
+    return strana;
+}
+function vyskaS2(vyskaJehlanu,vyskaPodstavy){
+    let strana = (Math.sqrt(vyskaJehlanu*vyskaJehlanu + vyskaPodstavy/2*vyskaPodstavy/2)).toFixed(2);
     return strana;
 }
 function objemJ(obsahPodstavy, vyskaJehlanu){
@@ -71,9 +72,16 @@ function objemJ(obsahPodstavy, vyskaJehlanu){
         objemk = (obsahPodstavy * vyskaJehlanu / 3).toFixed(2);
         return objemk;   
 }
-function povrchJ(obsahPodstavy, hranaSteny, vyskaSteny, pocetHran){
-    let povrchk;  
-    povrchk = obsahPodstavy + hranaSteny * vyskaSteny / 2 * pocetHran;
+function povrchJ(obsahPodstavy, stranaPodstavy, vyskaSteny, pocetHran, vyskaSteny2,vyskaPodstavy){ 
+    let tvar = document.getElementById("tvar").value;
+    let povrchk;
+    if(tvar == "obdelnik"){
+        povrchk = (obsahPodstavy + (stranaPodstavy * vyskaSteny + vyskaPodstavy * vyskaSteny2)).toFixed(2);
+
+    }
+    else{
+        povrchk = (obsahPodstavy +  stranaPodstavy * vyskaSteny / 2 * pocetHran).toFixed(2);
+    }
     return povrchk;
     
 }
