@@ -43,10 +43,13 @@ li a {
 #jehlanimg{
       width: 110%;
       padding-top: 10px;
-      padding-left: 100px;
   }
+  #kouleimg{
+    width: 95%;
+    padding-top: 10px;
+}
 #odstavec{
-      font-size: 40px;
+      font-size: 39px;
   }
 h2{
       font-size: 50px;
@@ -66,4 +69,7 @@ h2{
 }
 .padd{
   padding-bottom: 20px;
+}
+.upraveni{
+  padding-left: 150px;
 }
