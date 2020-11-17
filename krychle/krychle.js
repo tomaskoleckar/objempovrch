@@ -27,15 +27,15 @@ function vypisobjemu(objem){
     let jednotka;
     console.log(jednotky);
     switch(jednotky){
-        case "mm": jednotka = "mm";
+        case "mm": jednotka = "mm<sup>3</sup>";
         break;
-        case "dm": jednotka = "dm";
+        case "dm": jednotka = "dm<sup>3</sup>";
         break;
-        case "m": jednotka = "m";
+        case "m": jednotka = "m<sup>3</sup>";
         break;
-        case "km": jednotka = "km";
+        case "km": jednotka = "km<sup>3</sup>";
         break;
-        default: jednotka = "cm"
+        default: jednotka = "cm<sup>3</sup>"
         break;
     }
     console.log(jednotka);
@@ -46,15 +46,15 @@ function vypispovrchu(povrch){
     let jednotky = document.getElementById("jednotka").value;
     let jednotka;
     switch(jednotky){
-        case "mm": jednotka = "mm";
+        case "mm": jednotka = "mm<sup>2</sup>";
         break;
-        case "dm": jednotka = "dm";
+        case "dm": jednotka = "dm<sup>2</sup>";
         break;
-        case "m": jednotka = "m";
+        case "m": jednotka = "m<sup>2</sup>";
         break;
-        case "km": jednotka = "km";
+        case "km": jednotka = "km<sup>2</sup>";
         break;
-        default: jednotka = "cm"
+        default: jednotka = "cm<sup>2</sup>"
         break;
     }
     document.getElementById("vypis").innerHTML += "<br>" + "<p>Povrch krychle je " + povrch + " " + jednotka + ".</p>";

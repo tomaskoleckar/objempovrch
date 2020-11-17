@@ -51,9 +51,6 @@ li a {
 h2{
       font-size: 50px;
   }
-.homeimg{
-      width: 10%;
-  }
 .formular{
       background-color: rgb(114, 108, 108);
       color: white;
@@ -66,8 +63,7 @@ h2{
 #vypis{
     text-align: center;
     color: green;
-
 }
-
-
-
+.padd{
+  padding-bottom: 20px;
+}
